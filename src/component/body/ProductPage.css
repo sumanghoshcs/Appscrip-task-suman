@@ -1,0 +1,171 @@
+/* General styles for the product list container */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 16px; /* Space between items */
+  padding: 1rem;
+}
+.product-list2 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 16px; /* Space between items */
+  padding: 1rem;
+}
+.filteritem {
+  display: flex;
+  margin-right: 10vw;
+}
+/* Styles for individual products */
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product img {
+  width: 100%;
+  height: 400px !important;
+  margin-bottom: 1rem;
+}
+
+.product .description {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.product .description p {
+  margin: 0.5rem 0;
+}
+
+.product .description p:first-child {
+  font-size: 1.2rem;
+}
+
+.product .description p:last-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.addToCartBtn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: #3e8e41;
+}
+
+.text-container {
+  width: 200px; /* Adjust width as needed */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) at the end */
+  padding: 5px; /* Optional: for visual debugging */
+}
+
+.responsiveVisible {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.responsiveProduct {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.responsiveHamburger {
+  display: none;
+}
+
+.responsiveVisible2 {
+  display: none;
+}
+/* Responsive styles */
+@media only screen and (min-width: 1000px) {
+  .filteritem {
+    display: flex;
+    margin-right: 70%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .responsiveHamburger {
+    display: block;
+    margin-top: 8px;
+  }
+  .responsiveProduct {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .text-container {
+    width: 100px; /* Adjust width as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis (...) at the end */
+    /* Optional: for visual debugging */
+  }
+  .product-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 2fr)
+    ); /* Adjust for smaller screens */
+    gap: 2px;
+  }
+
+  .responsiveVisible {
+    display: none;
+  }
+  .responsiveVisible2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #878792;
+    border-top: 1px solid #878792;
+  }
+  .side-menu {
+    width: 140px !important;
+  }
+  .product-list2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+    gap: 3px; /* Space between items */
+    /* padding: 1rem; */
+  }
+
+  .product {
+    /* max-width: 100%; */
+    flex-direction: column;
+    max-width: 150px;
+    height: 300px;
+    /* margin: 1px; */
+    /* padding: 1rem; */
+    /* margin-left : 5vw; */
+    /* margin-right: 5vw; */
+    align-items: left !important;
+    text-align: left !important;
+  }
+
+  .product img {
+    height: auto; /* Adjust image height for better fit on smaller screens */
+    width: 100px;
+  }
+}
